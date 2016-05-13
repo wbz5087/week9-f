@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wubingzhang.week9">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+            <activity
+                android:theme="@style/AppTheme"
+                android:name=".accounts.AccountsActivity"
+                android:label="@string/app_name" >
+            </activity>
+
+    <activity
+        android:name=".accounts.tabAc"></activity>
+
+            <activity
+                android:name=".alarm.AddAlarmActivity"
+                android:label="@string/title_activity_set"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            <activity
+                android:name=".alarm.SettingActivity"
+                android:label="@string/title_activity_setting"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            <activity
+                android:name=".alarm.PlayAlarmActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+                <intent-filter>
+                    <action android:name="com.liwenquan.sl.playalarm" />
+
+                    <category android:name="android.intent.category.DEFAULT" />
+                </intent-filter>
+            </activity>
+
+            <activity
+                android:name=".alarm.AboutUsActivity"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+            <activity
+                android:name=".alarm.SetAlarmActivity"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+            <activity
+                android:name=".alarm.ClockListActivity"
+                android:launchMode="singleTask"
+                android:label="Alarm"
+                android:theme="@style/AppTheme.NoActionBar">
+                //android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            </activity>
+
+            <!-- 注册系统广播接收器 -->
+            <receiver android:name=".alarm.BootBroadcastReceiver">
+                <intent-filter>
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                    <category android:name="android.intent.category.HOME" />
+                </intent-filter>
+            </receiver>
+            <receiver android:name=".alarm.AlarmReceiver" />
+
+            <activity
+                android:name=".alarm.HelloActivity"
+                android:label="@string/title_activity_hello"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            <activity
+                android:name=".alarm.PushBugActivity"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".note.NoteActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity android:name=".note.ReminderAddActivity"
+            android:label="@string/title_activity_add_reminder"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".note.ReminderEditActivity"
+            android:label="@string/title_activity_edit_reminder"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <receiver android:name=".note.AlarmReceiver"/>
+
+        <receiver android:name=".note.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
