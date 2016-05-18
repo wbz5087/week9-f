@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.wubingzhang.week9.accounts.AccountsActivity;
-import com.example.wubingzhang.week9.alarm.ClockListActivity;
-import com.example.wubingzhang.week9.alarm.HelloActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     Button alarm,notes,account;
@@ -28,10 +25,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
-            case R.id.alarm:
-                intent = new Intent(this, ClockListActivity.class);
+           /* case R.id.alarm:
+                intent = new Intent(this, com.example.wubingzhang.week9.clock.ClockActivity.class);
                 startActivity(intent);
-                break;
+                break;*/
             case R.id.notes:
                 intent = new Intent(this, com.example.wubingzhang.week9.note.NoteActivity.class);
                 startActivity(intent);

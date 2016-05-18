@@ -34,18 +34,6 @@
     <string name="title_activity_edit_reminder">Edit Notes</string>
     <string name="title_activity_licenses">Licenses</string>
 
-    <string name="add_reminder">Notification</string>
-    <string name="details">Details</string>
-    <string name="date">Date</string>
-    <string name="time">Time</string>
-    <string name="repeat">Repeat</string>
-    <string name="repeat_off">Off</string>
-    <string name="repeat_no">Repetition Interval </string>
-    <string name="repeat_type">Type of Repetitions</string>
-
-    <string name="action_discard_reminder">Discard Notification</string>
-    <string name="action_save_reminder">Save Notification</string>
-
-    <string name="no_reminders">Click on the plus button to create your notifications!</string>
-
+    <drawable name="clr_normal">#ff6501</drawable>
+    <drawable name="clr_pressed">#000000</drawable>
 </resources>

@@ -254,7 +254,7 @@ private ShapeDrawable[] mds;
 	}
 	@Override
 	protected void onDraw(Canvas canvas){
-		int x=10,y=10,width=130,height=130;
+		int x=10,y=10,width=400,height=400;
 		
 		for(Drawable dr:mds){
 			if(dr!=null){
@@ -280,10 +280,6 @@ static class msd extends ShapeDrawable {
 		s.draw(c, msp);
 	}
 }
-
-
-
-
 
 
 }

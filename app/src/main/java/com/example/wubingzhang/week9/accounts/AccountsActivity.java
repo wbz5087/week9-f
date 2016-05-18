@@ -19,10 +19,11 @@ import java.io.IOException;
 
 public class AccountsActivity extends ActionBarActivity implements OnClickListener {
 DBclass mDBClass;
-ImageButton ibCloth1,ibEntertain,ibFee,ibRestau,ibTrans;
-Button bSee,bDel;
+ImageButton ibCloth1,ibEntertain,ibFee,ibRestau,ibTrans,book;
+Button bSee,bDel,save;
 EditText et;
 ListView myListview;
+	String type="book";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +33,12 @@ ListView myListview;
        
         ibEntertain=(ImageButton)findViewById(R.id.ImageButton01);
         ibFee=(ImageButton)findViewById(R.id.ImageButton05);
-        
+        book=(ImageButton)findViewById(R.id.ImageButton02);
         ibRestau=(ImageButton)findViewById(R.id.ImageButton04);
         ibTrans=(ImageButton)findViewById(R.id.ImageButton03);
         bSee=(Button)findViewById(R.id.button1);
         bDel=(Button)findViewById(R.id.button2);
+		save = (Button)findViewById(R.id.save);
         ibCloth1.setOnClickListener(this);
         ibEntertain.setOnClickListener(this);
         ibFee.setOnClickListener(this);
@@ -44,6 +46,15 @@ ListView myListview;
         ibTrans.setOnClickListener(this);
         bSee.setOnClickListener(this);
         bDel.setOnClickListener(this);
+		save.setOnClickListener(new View.OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				float f= Float.parseFloat(et.getText().toString());
+				long t= System.currentTimeMillis();
+				insertAccount(f,t,type);
+			}
+		});
         //myListview=(ListView)findViewById(R.id.myListView);
         funopen();
        
@@ -83,22 +94,27 @@ void funopen(){
 	@Override
 	public void onClick(View v) {
 		if(et.getText().length()!=0){
-			float f= Float.parseFloat(et.getText().toString());
-			long t= System.currentTimeMillis();
-					
 			if(v==ibCloth1){
-				insertAccount(f,t,"cloth");
+				type="cloth";
+				//insertAccount(f,t,"cloth");
 			}else if(v==ibFee){
-				insertAccount(f,t,"Fee");
+				type="Fee";
+				//insertAccount(f,t,"Fee");
 			}
 			else if(v==ibEntertain){
-				insertAccount(f,t,"Entertain");
+				type="Entertain";
+				//insertAccount(f,t,"Entertain");
 			}
 			else if(v==ibRestau){
-				insertAccount(f,t,"Restaurant");
+				type="Restaurant";
+				//insertAccount(f,t,"Restaurant");
 			}
 			else if(v==ibTrans){
-				insertAccount(f,t,"Traffic");
+				type="Traffic";
+				//insertAccount(f,t,"Traffic");
+			}else if(v==book){
+				type="book";
+				//insertAccount(f,t,"book");
 			}
 		}
 		if(v==bSee){

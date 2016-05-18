@@ -16,18 +16,19 @@
         android:text="Account Book"
         android:textSize="35dp" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="输入金额，然后点击分类按钮" />
+        android:id="@+id/save"
+        android:text="save"/>
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberDecimal" >
+        android:inputType="numberDecimal"
+        android:hint="enter cost">
 
         <requestFocus />
     </EditText>
@@ -44,7 +45,7 @@
             android:layout_alignTop="@+id/ImageButton01"
             android:layout_toRightOf="@+id/ImageButton01"
             android:scaleType="fitCenter"
-            android:src="@drawable/c" />
+            android:src="@drawable/s_study" />
 
         <ImageButton
             android:id="@+id/ImageButton04"
@@ -53,7 +54,7 @@
             android:layout_alignTop="@+id/ImageButton03"
             android:layout_toLeftOf="@+id/ImageButton02"
              android:scaleType="fitCenter"
-            android:src="@drawable/r"/>
+            android:src="@drawable/s_food"/>
 
         <ImageButton
             android:id="@+id/ImageButton05"
@@ -62,7 +63,7 @@
             android:layout_alignLeft="@+id/ImageButton02"
             android:layout_alignTop="@+id/ImageButton04"
             android:scaleType="fitCenter"
-            android:src="@drawable/f"/>
+            android:src="@drawable/s_fee"/>
 
         <ImageButton
             android:id="@+id/imageButton1"
@@ -72,7 +73,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="17dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/c" />
+            android:src="@drawable/s_shopping"/>
 
         <ImageButton
             android:id="@+id/ImageButton01"
@@ -81,7 +82,7 @@
             android:layout_above="@+id/ImageButton03"
             android:layout_centerHorizontal="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/e" />
+            android:src="@drawable/s_entertain" />
 
         <ImageButton
             android:id="@+id/ImageButton03"
@@ -90,7 +91,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/imageButton1"
             android:scaleType="fitCenter"
-            android:src="@drawable/t" />
+            android:src="@drawable/s_transport" />
 
     </RelativeLayout>
 
@@ -102,7 +103,7 @@
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="查看" />
+            android:text="view" />
 
         <Button
             android:id="@+id/button2"
@@ -111,7 +112,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="95dp"
-            android:text="清空" />
+            android:text="clear" />
 
     </RelativeLayout>
 
